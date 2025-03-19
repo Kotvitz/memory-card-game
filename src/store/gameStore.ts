@@ -31,7 +31,7 @@ export const useGameStore = create<GameState>((set) => ({
     const totalCards = level * 4;
     const images = Array.from(
       { length: totalCards / 2 },
-      (_, i) => `/images/img${i + 1}.png`
+      (_, i) => `/images/img${i + 1}.jpg`
     );
 
     const shuffledCards = [...images, ...images]
