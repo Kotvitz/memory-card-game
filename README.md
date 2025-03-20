@@ -7,10 +7,22 @@ A **responsive** and **interactive** memory card matching game built with **Reac
 ## **📌 Features**
 
 ✅ **Flip and match pairs of cards** to win.
-✅ **Three difficulty levels**: **Easy (4x4), Medium (6x4), Hard (8x4).**
+
+✅ **Three difficulty levels**:
+
+- **Easy (4x4)**
+- **Medium (6x4)**
+- **Hard (8x4)**
+
 ✅ **Responsive design** for **desktop, tablet, and mobile**.
-✅ **Live game statistics**: **attempts count & timer**.
+
+✅ **Live game statistics**:
+
+- **Attempts count**
+- **Timer**
+
 ✅ **Game history saved using `localStorage`**.
+
 ✅ **Smooth flip animation with visual effects**.
 
 ------
@@ -69,8 +81,11 @@ The board **dynamically adjusts** based on the device screen size to **provide a
 ## **🎮 How to Play?**
 
 1️⃣ **Select a difficulty level** from the game controls.
+
 2️⃣ **Click on a card** to reveal the image.
+
 3️⃣ **Find its matching pair** by remembering previously revealed cards.
+
 4️⃣ **Match all pairs** as fast as possible!
 
 🏆 **The fewer attempts, the better your score!**
