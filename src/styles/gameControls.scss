@@ -1,0 +1,22 @@
+@use "sass:color";
+@use "variables";
+
+.game-controls {
+    margin-top: 20px;
+
+    button {
+        background-color: variables.$primary-color;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: variables.$border-radius;
+        cursor: pointer;
+        margin: 5px;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background-color: color.adjust(variables.$primary-color, $lightness: -10%);
+        }
+    }
+}

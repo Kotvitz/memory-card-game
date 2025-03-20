@@ -1,0 +1,12 @@
+@use "variables";
+
+.clear-history {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: variables.$primary-color;
+    color: white;
+    border: none;
+    border-radius: variables.$border-radius;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
