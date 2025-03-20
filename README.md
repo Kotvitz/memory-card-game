@@ -1,54 +1,80 @@
-# React + TypeScript + Vite
+# **🃏 Memory Card Matching Game**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **responsive** and **interactive** memory card matching game built with **React, Vite, and Zustand** for state management. The game features **multiple difficulty levels**, a **timer**, and **game history tracking**.
 
-Currently, two official plugins are available:
+------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## **📌 Features**
 
-## Expanding the ESLint configuration
+✅ **Flip and match pairs of cards** to win.
+✅ **Three difficulty levels**: **Easy (4x4), Medium (6x4), Hard (8x4).**
+✅ **Responsive design** for **desktop, tablet, and mobile**.
+✅ **Live game statistics**: **attempts count & timer**.
+✅ **Game history saved using `localStorage`**.
+✅ **Smooth flip animation with visual effects**.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+------
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## **🚀 Tech Stack**
+
+- **Frontend**: React + Vite ⚡
+- **State Management**: Zustand 🏗️
+- **Styling**: SCSS 🎨
+- **Data Storage**: `localStorage` 📂
+
+------
+
+## **🖥️ Installation & Setup**
+
+### **🔹 Prerequisites**
+
+Make sure you have **Node.js** and **npm** installed.
+ If you don’t have them, download and install from [Node.js Official Site](https://nodejs.org/).
+
+### **🔹 Clone the Repository**
+
+```sh
+git clone https://github.com/your-username/memory-card-game.git
+cd memory-card-game
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### **🔹 Install Dependencies**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```sh
+npm install
 ```
+
+### **🔹 Start the Development Server**
+
+```sh
+npm run dev
+```
+
+The app will be available at **`http://localhost:5173/`**.
+
+------
+
+## **📱 Responsive Design**
+
+| Device        | Easy Mode | Medium Mode | Hard Mode |
+| ------------- | --------- | ----------- | --------- |
+| **Desktop** 🖥️ | 4x4       | 6x4         | 8x4       |
+| **Tablet** 🔳  | 4x4       | 4x6         | 5x6       |
+| **Mobile** 📱  | 3x5       | 3x8         | 4x8       |
+
+The board **dynamically adjusts** based on the device screen size to **provide an optimal experience**.
+
+------
+
+## **🎮 How to Play?**
+
+1️⃣ **Select a difficulty level** from the game controls.
+2️⃣ **Click on a card** to reveal the image.
+3️⃣ **Find its matching pair** by remembering previously revealed cards.
+4️⃣ **Match all pairs** as fast as possible!
+
+🏆 **The fewer attempts, the better your score!**
+
+------
+
+### **✨ Have Fun Playing! 🃏🔥**
