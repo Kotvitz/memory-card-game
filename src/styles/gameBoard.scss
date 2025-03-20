@@ -25,40 +25,64 @@
 .tile {
     width: 80px;
     height: 120px;
-    background: linear-gradient(145deg, #ffffff, #dcdcdc);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+    perspective: 1000px;
+    position: relative;
+    cursor: pointer;
+    border-radius: variables.$border-radius;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.tile .card-front,
+.tile .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: variables.$border-radius;
-    cursor: pointer;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease;
+}
 
-    &.matched {
-        background: variables.$secondary-color;
-        pointer-events: none;
-    }
+.tile .card-front {
+    transform: rotateY(180deg);
+    z-index: 2;
+}
 
-    &.revealed {
-        transform: rotateY(180deg);
-    }
+.tile .card-front .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: variables.$border-radius;
+}
 
-    .card-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 5px;
-        backface-visibility: hidden;
-        position: absolute;
-    }
+.tile .card-back {
+    background: linear-gradient(135deg, #e0e0e0, #bdbdbd);
+    transform: rotateY(0deg);
+    z-index: 1;
+}
 
-    .card-back {
-        width: 100%;
-        height: 100%;
-        background: variables.$primary-color;
-        border-radius: 5px;
-        position: absolute;
-        backface-visibility: hidden;
-    }
+.tile .card-back .card-icon {
+    font-size: 30px;
+    color: #666;
+}
+
+.tile.revealed {
+    transform: rotateY(180deg);
+}
+
+.tile.revealed .card-front {
+    transform: rotateY(180deg);
+    backface-visibility: visible;
+}
+
+.tile.revealed .card-back {
+    transform: rotateY(-180deg);
+}
+
+.tile.revealed {
+    pointer-events: none;
+    transform: rotateY(180deg);
 }
